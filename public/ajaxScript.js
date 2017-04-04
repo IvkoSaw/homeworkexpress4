@@ -1,7 +1,7 @@
 $(function(){
 	$('.btn').on('click', function(){
 		$.ajax({
-			url:"http://localhost:3000",
+			url:"http://localhost:3000/newArticle",
 			method:"post",
 			data:{
 				name:$('#name').val(),
