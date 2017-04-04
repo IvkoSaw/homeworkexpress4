@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>/</title>
+	<meta charset="utf-8">
+  	<script type="text/javascript" src="jquery.js"></script>
+  	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+  	<script type="text/javascript" src="dist/js/bootstrap.js"></script>
+  	<script type="text/javascript" src="ajaxScript.js"></script>
+  	<style type="text/css">
+	   	.center {
+    		margin-left: 36%;
+		}
+		input,textarea{width: 350px;}
+		input[type="submit"]{
+			width: 100px;
+			margin-left: 30%;
+		}
+  	</style>
+</head>
+	<body>
+	    <nav class="navbar navbar-inverse">
+	        <div class="container">
+	        	<div class="navbar-header">
+	          		<a class="navbar-brand" href="#">My website</a>
+	        	</div> 	
+	        </div>
+	    </nav>
+
+	    <div class="container">
+
+	        <div class="row row-offcanvas row-offcanvas-right">
+		        <div class="row">
+			        <% articles.forEach(function(article){ %>
+	          		<div class="col-xs-6 col-lg-4">
+	              		<h2><%= article.name %></h2>
+	              		<p><%= article.body %></p>
+	              		<p><a class="btn btn-default" href="/ <%= article.id %>" role="button">View details »</a></p>
+	          		</div>
+	            	<% }); %>
+	            
+	        	</div>
+	        </div>
+	    </div>
+
+	    <hr>
+	    <section class="center">
+	    	<h3>Contact Form</h3>
+	    	<input type="text" name="name" placeholder="Name" id="name">
+	    	<br>
+	    	<br>
+	    	<input type="email" name="email" placeholder="Email">
+	    	<br>
+	    	<br>
+	    	<input type="number" name="phoneNum" placeholder="Mobile Number">
+	    	<br>
+	    	<br>
+	    	<input type="text" name="subject" placeholder="Subject">
+	    	<br>
+	    	<br>
+	    	<textarea name="text" rows="5" placeholder="Message"></textarea>
+	    	<br>
+	    	<br>
+	    	<input type="submit" value="Submit Form" class="btn btn-primary">
+	    </section>
+	    <hr>
+
+	    <footer>
+	        <p>© 2016 Company, Inc.</p>
+	    </footer>
+	</body>
+</html>
