@@ -35,6 +35,7 @@ app.post('/newArticle', function(req,res){
 	var b = jsonString.substring(0,a);
 	var newJsonStr = b+","+objString+']';
 	// var newJson = JSON.parse(newJsonStr);
+	console.log(JSON.parse(newJsonStr));
 	fs.writeFile('./data.json', newJsonStr, function(err){
 		if (err) {
 			console.log(err);
