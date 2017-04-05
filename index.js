@@ -4,7 +4,7 @@ var fs = require('fs');
 var _ = require('underscore');
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: false }));//extended not found in terminal
 app.use(express.static('public'));
 app.use(express.static('node_modules/jquery/dist'));
 app.use(express.static('node_modules/bootstrap'));
